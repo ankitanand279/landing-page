@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,
+p,block,pre,a,abbr,acronym,big,cite,code,del,dfn,em,font,img,
+ins,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,
+figure,header,nav,section,article,aside,footer,figcaption{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+}
+
+.clearfix:after{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+html[xmlns].clearfix{
+    display: block;
+}
+
+*html .clearfix{
+    height: 1%;
+}
+
+ul,li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header,nav,section,article,aside,footer,hgroup{
+    display:block;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    font-family: sans-serif;
+    font-weight: 400;
+    background-color: #fff;
+    font-size: 16px;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #00000b;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none !important;
+    color:#ed563b;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Start Header Area Coding */
+
+header{
+    width: 100%;
+    background: rgba(255,255,255,0.1);
+    position: fixed;
+    z-index:999;
+}
+
+header nav{
+    width: 90%;
+    margin: auto;
+}
+
+header nav div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav div i{
+    cursor: pointer;
+    float: right;
+    font-size: 35px;
+}
+
+header nav ul{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+header nav ul li.items a {
+    display: block;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    font-family: calibri;
+    font-size: 18px;
+}
+
+header nav ul li.signup a {
+    display: block;
+    padding: 20px 20px;
+    text-transform: uppercase;
+    font-family: calibri;
+    font-size: 18px;
+    color: rgb(6, 6, 6);
+    background:#ed563b;
+}
+
+header nav ul li.items a:hover{
+    background: #000;
+    color: white;
+}
+
+header nav ul li.signup a:hover{
+    background: #00000b;
+    color: white;
+}
+
+header nav div a{
+    font-size: 40px;
+    font-family: Candara;
+    color: white;
+    font-weight: bold;
+}
+
+header nav div a:hover{
+    background: #00000b;
+    color: white;
+}
+
+header nav div a em{
+    color: #ed563b;
+}
+
+header nav div a em:hover{
+    background: #00000b;
+    color: #fff;
+}
+
+/* End Header Area Coding */
+
+/* Start Section Area Coding */
+ 
+section {
+    position: relative;
+}
+
+section #bg_video {
+    padding: 20px 20px;
+    min-width: 100%;
+    min-height: 52vh;
+    max-width: 100%;
+    max-height: 52vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+section.video-overlay {
+    position: absolute;
+    background-color: rgba(35,45,57,0.8);
+    top: 0;
+    left: 0;
+    bottom: 7px;
+    width: 100%;
+}
+
+section .caption {
+    text-align: center;
+    position: relative;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+section .caption h6 {
+    margin-top: 80px;
+    font-family: verdana;
+    font-size: 28px;
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+section .caption h6:hover {
+    background: #00000b;
+    color: #ed563b;
+}
+
+section .caption h2 {
+    margin-top: 20px;
+    margin-bottom: 2px;
+    font-family: sans-serif;
+    font-size: 80px;
+    text-transform: uppercase;
+    color: #fff;
+} 
+section .caption h2:hover{
+    background: #00000b;
+    color: #ed563b;
+}
+
+section button{
+    background: #ed563b;
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+    color: white;
+    font-family: calibri;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+section button:hover {
+    background: #544854;
+    transition: all .3s;
+}
+
+.menu_height{
+    max-height: 400px;
+}
+/* End Section Area Coding */
+
+/* Start media queries responsive coding */
+
+@media(min-width:992px){
+    header nav {
+        width: 98%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header nav ul {
+        max-height:none;
+    }
+
+    header nav ul li{
+        float: left;
+    }
+
+    header nav div i.bars{
+        display: none;
+    }
+}
+
+.footer{
+    margin-trim: 20px;
+    font-family: 'Roboto',sans-serif ;
+    font-size: 14px;
+    background-color: #00000b;
+    color:white;
+}
